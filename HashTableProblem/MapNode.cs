@@ -20,7 +20,12 @@ namespace HashTableProblem
             public k Key { get; set; }
             public v Value { get; set; }
         }
-        
+
+        /// <summary>
+        /// Gets the linked list.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <returns></returns>
         public LinkedList<KeyValue<K, V>> GetLinkedList(int position)
         {
             LinkedList<KeyValue<K, V>> linkedList = items[position];
@@ -31,21 +36,36 @@ namespace HashTableProblem
             }
             return linkedList;
         }
-        
-        public void Add(K key, V value)
+
+        /// <summary>
+        /// Adds the data into hash table.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        public void AddData(K key, V value)
         {
             int position = GetArrayPosition(key);
             LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
             KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
             linkedList.AddLast(item);
         }
-       
+
+        /// <summary>
+        /// To get the array position
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
         public int GetArrayPosition(K key)
         {
             int position = key.GetHashCode() % size;
             return Math.Abs(position);
         }
-       
+
+        /// <summary>
+        /// Gets the specified key.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
         public V Get(K key)
         {
             int position = GetArrayPosition(key);
@@ -59,7 +79,11 @@ namespace HashTableProblem
             }
             return default(V);
         }
-        
+
+        /// <summary>
+        /// Removes the specified key.
+        /// </summary>
+        /// <param name="key">The key.</param>
         public void Remove(K key)
         {
             int position = GetArrayPosition(key);

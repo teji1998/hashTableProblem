@@ -6,10 +6,15 @@ namespace HashTableProblem
 {
     public class Frequency
     {
-        
+        //To create a dictionary
         Dictionary<string, int> frequency = new Dictionary<string, int>();
 
-        public void Remove(MapNode<int, string> hash, string word)
+        /// <summary>
+        /// To remove a particular word from hash table
+        /// </summary>
+        /// <param name="hash"></param>
+        /// <param name="word"></param>
+        public void RemoveData(MapNode<int, string> hash, string word)
         {
             
             for (int key = 0; key < hash.size; key++)
@@ -22,6 +27,10 @@ namespace HashTableProblem
             }
         }
 
+        /// <summary>
+        /// To get frequency of the words
+        /// </summary>
+        /// <param name="hash"></param>
         public void WordFrequency(MapNode<int, string> hash)
         {
             for (int key = 0; key < hash.size; key++)
