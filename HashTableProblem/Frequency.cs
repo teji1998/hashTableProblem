@@ -8,7 +8,20 @@ namespace HashTableProblem
     {
         
         Dictionary<string, int> frequency = new Dictionary<string, int>();
-       
+
+        public void Remove(MapNode<int, string> hash, string word)
+        {
+            
+            for (int key = 0; key < hash.size; key++)
+            {
+                if (hash.Get(key).Equals(word))
+                {
+                    hash.Remove(key);
+                    Console.WriteLine($"Removed {word} from paragraph");
+                }
+            }
+        }
+
         public void WordFrequency(MapNode<int, string> hash)
         {
             for (int key = 0; key < hash.size; key++)
@@ -21,5 +34,7 @@ namespace HashTableProblem
                 Console.WriteLine($"frequency of word '{item.Key}' is {item.Value}");
             }
         }
+
+       
     }
 }

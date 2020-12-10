@@ -18,8 +18,7 @@ namespace HashTableProblem
             string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
             string[] breakParagraph = paragraph.Split(" ");
             int key = 0;
-            //Loop iterates on paragraph and adds key and value of each substing
-            //To hash
+           
             foreach (string word in breakParagraph)
             {
                 hash.Add(key, word);
@@ -28,6 +27,7 @@ namespace HashTableProblem
             Frequency freq = new Frequency();
 
             freq.WordFrequency(hash);
+            freq.Remove(hash,"are");
          }
     }
 }

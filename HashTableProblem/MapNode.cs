@@ -79,6 +79,28 @@ namespace HashTableProblem
                 linkedList.Remove(foundItem);
             }
         }
+
+        /*public void RemoveValue(V value)
+        {
+            // Iterating through foreach loop to get the key value pair in the list
+            foreach (LinkedList<KeyValue<K, V>> list in items)
+            {
+                if (list == null)
+                    continue;
+                // iterating through loop to get each object in the list
+                foreach (KeyValue<K, V> obj in list)
+                {
+                    if (obj.Equals(null))
+                        continue;
+                    // if the object matches the value then it will be removed
+                    if (obj.value.Equals(value))
+                    {
+                        Remove(obj.key);
+                        break;
+                    }
+                }
+            }
+        }*/
     }
 
 }
