@@ -9,7 +9,7 @@ namespace HashTableProblem
             Console.WriteLine("Welcome to the hash table problem !! ");
             MapNode<int, string> hash = new MapNode<int, string>(6);
 
-            /*   hash.AddData(0, "To");
+            /* hash.AddData(0, "To");
                hash.AddData(1, "be");
                hash.AddData(2, "or");
                hash.AddData(3, "not");
@@ -25,10 +25,11 @@ namespace HashTableProblem
                 hash.AddData(key, word);
                 key ++;
             }
+
             Frequency freq = new Frequency();
 
             freq.WordFrequency(hash);
             freq.RemoveData(hash,"are");
-         }
+        }
     }
 }

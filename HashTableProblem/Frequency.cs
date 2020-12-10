@@ -43,7 +43,5 @@ namespace HashTableProblem
                 Console.WriteLine($"frequency of word '{item.Key}' is {item.Value}");
             }
         }
-
-       
     }
 }

@@ -8,13 +8,13 @@ namespace HashTableProblem
     {
         public readonly int size;
         private readonly LinkedList<KeyValue<K, V>>[] items;
-      
+
         public MapNode(int size)
         {
             this.size = size;
             this.items = new LinkedList<KeyValue<K, V>>[size];
         }
-        
+
         public struct KeyValue<k, v>
         {
             public k Key { get; set; }
@@ -103,8 +103,5 @@ namespace HashTableProblem
                 linkedList.Remove(foundItem);
             }
         }
-
-       
     }
-
 }
